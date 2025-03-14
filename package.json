@@ -1,0 +1,21 @@
+{
+  "name": "thebluealliancev3",
+  "version": "1.0.0",
+  "description": "A wrapper for The Blue Alliance API v3.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "FRC",
+    "Robotics",
+    "The Blue Alliance",
+    "TBA"
+  ],
+  "author": "Gray Jackson-Noell",
+  "license": "ISC",
+  "types": "./dist/index.d.ts",
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}
