@@ -1020,7 +1020,7 @@ type APIRequestData = {
     call: "/insights/notables/{year}";
     year: number;
 };
-type TeamFull = {
+export type TeamFull = {
     key: string;
     team_number: number;
     nickname: string;
@@ -1039,7 +1039,7 @@ type TeamFull = {
     website: string;
     rookie_year: number;
 };
-type TeamSimple = {
+export type TeamSimple = {
     key: string;
     team_number: number;
     nickname: string;
@@ -1048,7 +1048,7 @@ type TeamSimple = {
     state_prov: string;
     country: string;
 };
-type EventFull = {
+export type EventFull = {
     key: string;
     name: string;
     event_code: string;
@@ -1090,7 +1090,7 @@ type EventFull = {
     playoff_type: number;
     playoff_type_string: string;
 };
-type EventSimple = {
+export type EventSimple = {
     key: string;
     name: string;
     event_code: string;
@@ -1108,7 +1108,7 @@ type EventSimple = {
     end_date: string;
     year: number;
 };
-type Status = {
+export type Status = {
     qual: {
         num_teams: number;
         ranking: {
@@ -1160,10 +1160,10 @@ type Status = {
     next_match_key: string;
     last_match_key: string;
 };
-type Statuses = {
+export type Statuses = {
     [teamKey: string]: Status;
 };
-type Award = {
+export type Award = {
     name: string;
     award_type: number;
     event_key: string;
@@ -1173,7 +1173,7 @@ type Award = {
     }[];
     year: number;
 };
-type Ranking = {
+export type Ranking = {
     team_key: string;
     rank: number;
     rookie_bonus: number;
@@ -1188,7 +1188,7 @@ type Ranking = {
         qual_points: number;
     };
 };
-type Leaderboard = {
+export type Leaderboard = {
     data: {
         rankings: {
             value: number;
@@ -1199,7 +1199,7 @@ type Leaderboard = {
     name: string;
     year: number;
 };
-type Notable = {
+export type Notable = {
     data: {
         entries: {
             context: string[];
@@ -1209,19 +1209,19 @@ type Notable = {
     name: string;
     year: number;
 };
-type District = {
+export type District = {
     abbreviation: string;
     display_name: string;
     key: string;
     year: number;
 };
-type Robot = {
+export type Robot = {
     year: number;
     robot_name: string;
     key: string;
     team_key: string;
 };
-type MatchFull = {
+export type MatchFull = {
     key: string;
     comp_level: "qm" | "f" | "sf";
     set_number: number;
@@ -1307,7 +1307,7 @@ type MatchFull = {
         key: string;
     }[];
 };
-type MatchSimple = {
+export type MatchSimple = {
     key: string;
     comp_level: "qm" | "f" | "sf";
     set_number: number;
@@ -1393,7 +1393,7 @@ type MatchSimple = {
         key: string;
     }[];
 };
-type Media = {
+export type Media = {
     type: string;
     foreign_key: string;
     details: {
@@ -1404,7 +1404,7 @@ type Media = {
     direct_url: string;
     view_url: string;
 };
-type Alliance = {
+export type Alliance = {
     name: string;
     backup: {
         in: string;
@@ -1428,7 +1428,7 @@ type Alliance = {
         status: string;
     };
 };
-type EventRankings = {
+export type EventRankings = {
     rankings: {
         matches_played: number;
         qual_average: number;
@@ -1452,7 +1452,7 @@ type EventRankings = {
         name: string;
     }[];
 };
-type PointsData = {
+export type PointsData = {
     points: {
         [teamKey: string]: {
             alliance_points: number;
@@ -1542,7 +1542,7 @@ type APIResponseMap = {
         };
     };
     "/event/{event_key}/coprs": {
-        [field: string]: {
+        [dataField: string]: {
             [teamKey: string]: number;
         };
     };

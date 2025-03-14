@@ -721,7 +721,7 @@ type APIRequestData = {
     year: number;
 };
 
-type TeamFull = {
+export type TeamFull = {
     key: string;
     team_number: number;
     nickname: string;
@@ -741,7 +741,7 @@ type TeamFull = {
     rookie_year: number;
 };
 
-type TeamSimple = {
+export type TeamSimple = {
     key: string;
     team_number: number;
     nickname: string;
@@ -751,7 +751,7 @@ type TeamSimple = {
     country: string;
 }
 
-type EventFull = {
+export type EventFull = {
     key: string;
     name: string;
     event_code: string;
@@ -794,7 +794,7 @@ type EventFull = {
     playoff_type_string: string;
 }
 
-type EventSimple = {
+export type EventSimple = {
     key: string;
     name: string;
     event_code: string;
@@ -813,7 +813,7 @@ type EventSimple = {
     year: number;
 }
 
-type Status = {
+export type Status = {
     qual: {
         num_teams: number;
         ranking: {
@@ -867,11 +867,11 @@ type Status = {
 
 }
 
-type Statuses = {
+export type Statuses = {
     [teamKey: string]: Status;
 }
 
-type Award = {
+export type Award = {
     name: string;
     award_type: number;
     event_key: string;
@@ -882,7 +882,7 @@ type Award = {
     year: number;
 }
 
-type Ranking = {
+export type Ranking = {
     team_key: string;
     rank: number;
     rookie_bonus: number;
@@ -898,7 +898,7 @@ type Ranking = {
     };
 }
 
-type Leaderboard = {
+export type Leaderboard = {
     data: {
         rankings: {
             value: number;
@@ -910,7 +910,7 @@ type Leaderboard = {
     year: number;
 }
 
-type Notable = {
+export type Notable = {
     data: {
         entries: {
             context: string[];
@@ -921,21 +921,21 @@ type Notable = {
     year: number;
 }
 
-type District = {
+export type District = {
     abbreviation: string;
     display_name: string;
     key: string;
     year: number;
 }
 
-type Robot = {
+export type Robot = {
     year: number;
     robot_name: string;
     key: string;
     team_key: string;
 }
 
-type MatchFull = {
+export type MatchFull = {
     key: string;
     comp_level: "qm" | "f" | "sf";
     set_number: number;
@@ -1022,7 +1022,7 @@ type MatchFull = {
     }[];
 }
 
-type MatchSimple = {
+export type MatchSimple = {
     key: string;
     comp_level: "qm" | "f" | "sf";
     set_number: number;
@@ -1109,7 +1109,7 @@ type MatchSimple = {
     }[];
 };
 
-type Media = {
+export type Media = {
     type: string;
     foreign_key: string;
     details: {
@@ -1121,7 +1121,7 @@ type Media = {
     view_url: string;
 };
 
-type Alliance = {
+export type Alliance = {
     name: string;
     backup: {
         in: string;
@@ -1146,7 +1146,7 @@ type Alliance = {
     };
 };
 
-type EventRankings = {
+export type EventRankings = {
     rankings: {
         matches_played: number;
         qual_average: number;
@@ -1171,7 +1171,7 @@ type EventRankings = {
     }[];
 };
 
-type PointsData = {
+export type PointsData = {
     points: {
         [teamKey: string]: {
             alliance_points: number;
